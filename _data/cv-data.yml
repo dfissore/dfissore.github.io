@@ -70,7 +70,8 @@ education:
       end-time: 2026
       details:
         Research in type theory through logic programming aiming to propose a
-        versatile type-class solver for the Coq proof assistant.
+        versatile type-class solver for the Coq proof assistant and a static
+        determinacy checker.
     - degree: MSc in Computer Science
       university: Université Côte d'Azur
       start-time: 2021
@@ -126,6 +127,12 @@ experiences:
 teaching:
   title: Teaching
   info:
+    - role: Teaching assistant in functional programming
+      time: autumn 2025
+      company: Université Côte d'Azur
+    - role: Teaching assistant in functional programming (64h)
+      time: autumn 2024 $\to$ sprint 2025
+      company: Université Côte d'Azur
     - role: Teaching assistant in imperative programming (36h)
       time: spring 2024
       company: Université Côte d'Azur

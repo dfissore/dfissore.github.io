@@ -4,7 +4,8 @@
         size: A4;
     }
     body {
-       font-size: 12pt;
+      height: 100%;
+      font-size: 12pt;
     }
 
     img.avatar {
@@ -12,13 +13,18 @@
         -webkit-filter: greyscale(1);
     }
    .main-wrapper .time {
-       float: right;
-        color: black !important;
-        -webkit-print-color-adjust: exact; 
+      z-index: 1000;
+      color: black !important;
+      white-space: nowrap;
+      position: absolute !important;
+      right: 0 !important;
+      top: 0 !important;
+      float: none !important; /* Disable the float that was causing confusion */
    }
     .sidebar-wrapper {
         position: static;
-        float: right;
+        float: left;
+        min-height: 297mm; 
         width: 40%;
         -webkit-print-color-adjust: exact; 
     }
@@ -41,5 +47,4 @@
    .fa-inverse:before {
      color: #ffffff !important;
    }
-
 }
