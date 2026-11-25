@@ -36,7 +36,7 @@ p {
 .wrapper {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  background: $theme-color;
+  // background: $theme-color;
   max-width: 1200px;
   // margin: 0 auto;
   position: relative;
@@ -46,17 +46,17 @@ p {
 .sidebar-wrapper {
   grid-column: span 3;
   order: $sidebar-order;
-  background: $theme-color;
-  color: #fff;
+  background: #fff;
+  color: black;
   a {
-    color: #fff;
+    color: black;
   }
   .profile-container {
     padding: 30px;
     //background: darken($theme-color, 10%);
-    background: rgba(0, 0, 0, 0.2);
+    // background: rgba(0, 0, 0, 0.2);
     text-align: center;
-    color: #fff;
+    color: black;
   }
   .name {
     font-size: 32px;
@@ -121,20 +121,20 @@ p {
       }
     }
     .meta {
-      color: rgba(256, 256, 256, 0.6);
+      color: black;
       font-weight: 500;
       margin-bottom: 0px;
       margin-top: 0;
     }
     .time {
-      color: rgba(256, 256, 256, 0.6);
+      color: black;
       font-weight: 500;
       margin-bottom: 0px;
     }
   }
   .languages-container {
     .lang-desc {
-      color: rgba(256, 256, 256, 0.6);
+      color: black;
     }
   }
 

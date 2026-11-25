@@ -3,7 +3,7 @@
 #
 
 sidebar:
-  position: right # position of the sidebar : left or right
+  position: left # position of the sidebar : left or right
   about: False # set to False or comment line if you want to remove the "how to use?" in the sidebar
   education: False # set to False if you want education in main section instead of in sidebar
 
@@ -13,7 +13,7 @@ sidebar:
   avatar: https://avatars.githubusercontent.com/u/79260701?v=4 #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
   # Sidebar links
-  email: davide [dot] fissore [at] inria.fr
+  email: dfissore99 [at] gmail.com
   # phone: +39 331 3533735
   # timezone: Europe/Paris
   # citizenship: Italian
@@ -67,7 +67,7 @@ education:
     - degree: PhD in Computer Science
       university: Université Côte d'Azur
       start-time: 2023
-      end-time: Present
+      end-time: 2026
       details:
         Research in type theory through logic programming aiming to propose a
         versatile type-class solver for the Coq proof assistant.
