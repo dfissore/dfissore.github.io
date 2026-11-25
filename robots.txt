@@ -2,4 +2,4 @@ User-agent: *
 
 Disallow: /norobots/
 
-Sitemap: /dfissore.github.io/sitemap.xml
+Sitemap: https://dfissore.github.io/sitemap.xml
