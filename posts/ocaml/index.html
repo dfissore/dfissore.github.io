@@ -29,27 +29,28 @@
 
   
 
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <!-- Begin Jekyll SEO tag v2.9.1 -->
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="Ocaml &amp; Opam" />
+<meta property="og:title" content="OCaml and OPAM" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="perf: profile ocaml performance" />
-<meta property="og:description" content="perf: profile ocaml performance" />
+<meta name="description" content="Profiling OCaml Performance" />
+<meta name="twitter:description" property="og:description" content="Profiling OCaml Performance" />
 <link rel="canonical" href="/about-me/posts/ocaml/" />
 <meta property="og:url" content="/about-me/posts/ocaml/" />
 <meta property="og:site_name" content="Davide Fissore" />
 <meta property="og:image" content="/about-me/assets/img/logo_opam.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-02-23T10:28:52+01:00" />
+<meta property="article:published_time" content="2026-11-25T12:26:08+01:00" />
+<meta property="article:modified_time" content="2026-11-25T12:15:34+01:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="/about-me/assets/img/logo_opam.png" />
-<meta property="twitter:title" content="Ocaml &amp; Opam" />
+<meta name="twitter:image" content="/about-me/assets/img/logo_opam.png" />
+<meta name="twitter:title" content="OCaml and OPAM" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-10-17T16:06:28+02:00","datePublished":"2026-02-23T10:28:52+01:00","description":"perf: profile ocaml performance","headline":"Ocaml &amp; Opam","image":"/about-me/assets/img/logo_opam.png","mainEntityOfPage":{"@type":"WebPage","@id":"/about-me/posts/ocaml/"},"url":"/about-me/posts/ocaml/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-11-25T12:15:34+01:00","datePublished":"2026-11-25T12:26:08+01:00","description":"Profiling OCaml Performance","headline":"OCaml and OPAM","image":"/about-me/assets/img/logo_opam.png","mainEntityOfPage":{"@type":"WebPage","@id":"/about-me/posts/ocaml/"},"url":"/about-me/posts/ocaml/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Ocaml & Opam | Davide Fissore
+  <title>OCaml and OPAM | Davide Fissore
   </title>
 
   <!--
@@ -255,7 +256,7 @@
     <h1 class="site-title">
       <a href="/about-me/">Davide Fissore</a>
     </h1>
-    <p class="site-subtitle fst-italic mb-0">PhD student in Computer Science</p>
+    <p class="site-subtitle fst-italic mb-0"></p>
   </header>
   <!-- .profile-wrapper -->
 
@@ -290,7 +291,7 @@
         </li>
         <!-- .nav-item -->
       
-        <li class="nav-item active">
+        <li class="nav-item">
           <a href="/about-me/posts/" class="nav-link">
             <i class="fa-fw fas fa-crosshairs"></i>
             
@@ -417,7 +418,7 @@
         
           
             
-              <span>Ocaml & Opam</span>
+              <span>OCaml and OPAM</span>
             
 
           
@@ -731,7 +732,7 @@
 
 <article class="px-1">
   <header>
-    <h1 data-toc-skip>Ocaml & Opam</h1>
+    <h1 data-toc-skip>OCaml and OPAM</h1>
     
 
     <div class="post-meta text-muted">
@@ -775,13 +776,13 @@
 
 <time
   
-  data-ts="1729173988"
+  data-ts="1795605334"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Oct 17, 2024
+  Nov 25, 2026
 </time>
 
         </span>
@@ -837,7 +838,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="197 words"
+  title="281 words"
 >
   <em>1 min</em> read</span>
 
@@ -847,7 +848,9 @@
   </header>
 
   <div class="content">
-    <h2 id="perf-profile-ocaml-performance"><span class="me-2">perf: profile ocaml performance</span><a href="#perf-profile-ocaml-performance" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="profiling-ocaml-performance"><span class="me-2">Profiling OCaml Performance</span><a href="#profiling-ocaml-performance" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p>Linux <code class="language-plaintext highlighter-rouge">perf</code> can profile OCaml executables and collect call-graph information:</p>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -858,25 +861,26 @@
   </thead>
   <tbody>
     <tr>
-      <td>Profile file</td>
-      <td><code class="language-plaintext highlighter-rouge">sudo perf record --call-graph lbr -- OCAML_BIN</code></td>
+      <td>Record a profile</td>
+      <td><code class="language-plaintext highlighter-rouge">sudo perf record --call-graph lbr -- OCAML_EXECUTABLE</code></td>
     </tr>
     <tr>
-      <td>Profile with name</td>
-      <td><code class="language-plaintext highlighter-rouge">sudo perf record --call-graph lbr -o perf.data.old -- OCAML_BIN</code></td>
+      <td>Record a profile to a named file</td>
+      <td><code class="language-plaintext highlighter-rouge">sudo perf record --call-graph lbr -o perf.data.old -- OCAML_EXECUTABLE</code></td>
     </tr>
     <tr>
-      <td>Compare perf files</td>
-      <td><code class="language-plaintext highlighter-rouge">sudo perf diff perf.data.old perf.data</code></td>
+      <td>Compare two profile files</td>
+      <td><code class="language-plaintext highlighter-rouge">perf diff perf.data.old perf.data</code></td>
     </tr>
   </tbody>
 </table></div>
 
-<p>A good pointer: <a href="https://ocaml-explore.netlify.app/workflows/profiling-your-project/">here</a></p>
+<p>A detailed guide is available in
+<a href="https://ocaml-explore.netlify.app/workflows/profiling-your-project/">Profiling an OCaml project</a>.</p>
 
-<h2 id="opam"><span class="me-2">Opam</span><a href="#opam" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="opam"><span class="me-2">OPAM</span><a href="#opam" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<h3 id="main-commands"><span class="me-2">Main commands</span><a href="#main-commands" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="main-commands"><span class="me-2">Main Commands</span><a href="#main-commands" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -887,92 +891,148 @@
   </thead>
   <tbody>
     <tr>
-      <td>Create global switch</td>
+      <td>Create a global switch</td>
       <td><code class="language-plaintext highlighter-rouge">opam switch create SWITCH_NAME 4.14.1</code></td>
     </tr>
     <tr>
-      <td>Create local switch</td>
+      <td>Create a local switch</td>
       <td><code class="language-plaintext highlighter-rouge">opam switch create . 4.14.1</code></td>
     </tr>
     <tr>
-      <td>Remove switch</td>
+      <td>Remove a switch</td>
       <td><code class="language-plaintext highlighter-rouge">opam switch remove SWITCH_NAME</code></td>
     </tr>
     <tr>
-      <td>Export switch</td>
+      <td>Export a switch</td>
       <td><code class="language-plaintext highlighter-rouge">opam switch export FILE_EXPORT.txt --switch SWITCH_NAME</code></td>
     </tr>
     <tr>
-      <td>Import switch</td>
+      <td>Import a switch</td>
       <td><code class="language-plaintext highlighter-rouge">opam switch import FILE_EXPORT.txt --switch SWITCH_NAME</code></td>
     </tr>
     <tr>
-      <td>Install only deps</td>
-      <td><code class="language-plaintext highlighter-rouge">opam install --deps-only PKG_NAME</code></td>
+      <td>Install only dependencies</td>
+      <td><code class="language-plaintext highlighter-rouge">opam install --deps-only PACKAGE_NAME</code></td>
     </tr>
     <tr>
-      <td>Pin git branch</td>
+      <td>Pin a Git branch</td>
       <td><code class="language-plaintext highlighter-rouge">opam pin add https://github.com/PATH_TO_REPO.git#BRANCH_NAME</code></td>
     </tr>
     <tr>
-      <td>Install pkg version</td>
-      <td><code class="language-plaintext highlighter-rouge">opam install PKG_NAME=VERSION</code></td>
+      <td>Install a specific package version</td>
+      <td><code class="language-plaintext highlighter-rouge">opam install PACKAGE_NAME=VERSION</code></td>
     </tr>
   </tbody>
 </table></div>
 
-<h3 id="create-empty-switch-for-coq"><span class="me-2">Create empty switch for coq</span><a href="#create-empty-switch-for-coq" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="create-an-empty-switch-for-coq"><span class="me-2">Create an Empty Switch for Coq</span><a href="#create-an-empty-switch-for-coq" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ol>
-  <li><code class="language-plaintext highlighter-rouge">opam switch create SWITCH_NAME 4.14.1</code></li>
-  <li><code class="language-plaintext highlighter-rouge">opam switch SWITCH_NAME</code></li>
-  <li><code class="language-plaintext highlighter-rouge">eval $(opam env)</code></li>
-  <li><code class="language-plaintext highlighter-rouge">opam install --deps-only coq-core coq-elpi ocamlformat</code></li>
-  <li><code class="language-plaintext highlighter-rouge">./configure</code>
-    <ul>
-      <li>the first answer is <code class="language-plaintext highlighter-rouge">/home/USER/.opam/SWITCH_NAME/bin</code></li>
-      <li>the other add the suggested postfix to the previous path without bin</li>
-    </ul>
+  <li>
+    <p>Create a switch:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>opam switch create SWITCH_NAME 4.14.1
+</pre></td></tr></tbody></table></code></div>    </div>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">make world</code></li>
-  <li><code class="language-plaintext highlighter-rouge">dune install coq-core coq-stdlib coqide-server</code></li>
-</ol>
+  <li>
+    <p>Select the switch and load its environment:</p>
 
-<h3 id="rectype-error-in-lsp-server"><span class="me-2">Rectype error in lsp-server</span><a href="#rectype-error-in-lsp-server" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<blockquote>
-  <p>Use merlin file to get dependency in a ocaml project not using <code class="language-plaintext highlighter-rouge">dune</code></p>
-</blockquote>
-
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">make .merlin</code></li>
-  <li><code class="language-plaintext highlighter-rouge">touch dune-project</code></li>
-  <li>in <code class="language-plaintext highlighter-rouge">./.vscode/settings.json</code>
-    <div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+    <div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-3
-</pre></td><td class="rouge-code"><pre>"ocaml.server.args": [
-     "--fallback-read-dot-merlin"
- ]
+</pre></td><td class="rouge-code"><pre>opam switch SWITCH_NAME
+<span class="nb">eval</span> <span class="s2">"</span><span class="si">$(</span>opam <span class="nb">env</span><span class="si">)</span><span class="s2">"</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>
+    <p>Install dependencies:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>opam <span class="nb">install</span> <span class="nt">--deps-only</span> coq-core coq-elpi ocamlformat
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>
+    <p>Configure the project:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>./configure
+</pre></td></tr></tbody></table></code></div>    </div>
+
+    <ul>
+      <li>Enter <code class="language-plaintext highlighter-rouge">/home/USER/.opam/SWITCH_NAME/bin</code> as the executable directory.</li>
+      <li>For subsequent configuration paths, append the suggested suffix without
+replacing the <code class="language-plaintext highlighter-rouge">.bin</code> directory.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Build and install:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>make world
+dune <span class="nb">install </span>coq-core coq-stdlib coqide-server
 </pre></td></tr></tbody></table></code></div>    </div>
   </li>
 </ol>
 
-<h3 id="vnorm-error-in-coq-elpi"><span class="me-2">Vnorm error in coq-elpi</span><a href="#vnorm-error-in-coq-elpi" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="resolve-ocaml-lsp-errors"><span class="me-2">Resolve OCaml LSP Errors</span><a href="#resolve-ocaml-lsp-errors" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p><code class="language-plaintext highlighter-rouge">git clean -dfx</code></p>
+<p>If an OCaml project does not use Dune, Merlin may require a <code class="language-plaintext highlighter-rouge">.merlin</code> file:</p>
 
-<h3 id="opam-exported-files"><span class="me-2">Opam exported files</span><a href="#opam-exported-files" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>make .merlin
+<span class="nb">touch </span>dune-project
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>Add the fallback option in <code class="language-plaintext highlighter-rouge">.vscode/settings.json</code>:</p>
+
+<div class="language-json highlighter-rouge"><div class="code-header">
+        <span data-label-text="JSON"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"ocaml.server.args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"--fallback-read-dot-merlin"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="resolve-a-vnorm-error-in-coq-elpi"><span class="me-2">Resolve a <code class="language-plaintext highlighter-rouge">Vnorm</code> Error in Coq-Elpi</span><a href="#resolve-a-vnorm-error-in-coq-elpi" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git clean <span class="nt">-dfx</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>Use this command carefully: it permanently removes untracked and ignored files.</p>
+
+<h3 id="exported-opam-switch"><span class="me-2">Exported OPAM Switch</span><a href="#exported-opam-switch" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>A reference switch configuration is available
+<a href="/about-me/assets/lib/opam_switch_coq_elpi.txt">here</a>.</p>
+
+<h3 id="useful-links"><span class="me-2">Useful Links</span><a href="#useful-links" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
-  <li>Coq end elpi : <a href="/about-me/assets/lib/opam_switch_coq_elpi.txt">here</a></li>
+  <li><a href="https://opam.ocaml.org/doc/FAQ.html">OPAM documentation</a></li>
 </ul>
-
-<h3 id="useful-links"><span class="me-2">Useful links</span><a href="#useful-links" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p><a href="https://opam.ocaml.org/doc/FAQ.html">https://opam.ocaml.org/doc/FAQ.html</a></p>
 
   </div>
 

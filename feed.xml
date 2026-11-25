@@ -4,7 +4,7 @@
   <id>/about-me/</id>
   <title>Davide Fissore</title>
   <subtitle>FissoreD</subtitle>
-  <updated>2026-02-23T10:28:52+01:00</updated>
+  <updated>2026-11-25T12:26:08+01:00</updated>
   <author>
     <name>Davide Fissore</name>
     <uri>/about-me/</uri>
@@ -20,11 +20,11 @@
 
   
   <entry>
-    <title>My scripts</title>
-    <link href="/about-me/posts/scripts/" rel="alternate" type="text/html" title="My scripts" />
-    <published>2026-02-23T10:28:52+01:00</published>
+    <title>My Scripts</title>
+    <link href="/about-me/posts/scripts/" rel="alternate" type="text/html" title="My Scripts" />
+    <published>2026-11-25T12:26:08+01:00</published>
   
-    <updated>2024-08-12T15:24:55+02:00</updated>
+    <updated>2026-11-25T12:15:34+01:00</updated>
   
     <id>/about-me/posts/scripts/</id>
     <content src="/about-me/posts/scripts/" />
@@ -36,33 +36,41 @@
     
   
 
-  <summary>Remove tags from mp3 file
+  <summary>Remove MP3 Metadata
+
+Install the music-tag package:
 
 pip install music-tag
 
+
+The following script removes all metadata from an MP3 file:
+
 from mutagen.mp3 import MP3
-mp3 = MP3(FILE_NAME)
+
+mp3 = MP3(&amp;quot;FILE_NAME.mp3&amp;quot;)
 mp3.delete()
 mp3.save()
 
 
-A more complete example can be found here
+A more complete implementation is available
+here.
 
-Battery alert
+Battery Alert
 
-To preserve the battery of the computer, it is useful to keep the battery level
-between about $20\%$ and $85\%$. I have implemented a small script written in
-bash language notifying at regular intervals if the batt...</summary>
+To reduce battery wear, the charge level can be maintained approximately
+between 20% and 85%.
+
+A Bash script ch...</summary>
 
   </entry>
 
   
   <entry>
-    <title>Ocaml &amp; Opam</title>
-    <link href="/about-me/posts/ocaml/" rel="alternate" type="text/html" title="Ocaml &amp;amp; Opam" />
-    <published>2026-02-23T10:28:52+01:00</published>
+    <title>OCaml and OPAM</title>
+    <link href="/about-me/posts/ocaml/" rel="alternate" type="text/html" title="OCaml and OPAM" />
+    <published>2026-11-25T12:26:08+01:00</published>
   
-    <updated>2024-10-17T16:06:28+02:00</updated>
+    <updated>2026-11-25T12:15:34+01:00</updated>
   
     <id>/about-me/posts/ocaml/</id>
     <content src="/about-me/posts/ocaml/" />
@@ -74,7 +82,9 @@ bash language notifying at regular intervals if the batt...</summary>
     
   
 
-  <summary>perf: profile ocaml performance
+  <summary>Profiling OCaml Performance
+
+Linux perf can profile OCaml executables and collect call-graph information:
 
 
   
@@ -85,25 +95,15 @@ bash language notifying at regular intervals if the batt...</summary>
   
   
     
-      Profile file
-      sudo perf record --call-graph lbr -- OCAML_BIN
+      Record a profile
+      sudo perf record --call-graph lbr -- OCAML_EXECUTABLE
     
     
-      Profile with name
-      sudo perf record --call-graph lbr -o perf.data.old -- OCAML_BIN
+      Record a profile to a named file
+      sudo perf record --call-graph lbr -o perf.data.old -- OCAML_EXECUTABLE
     
     
-      Compare perf files
-      sudo perf diff perf.data.old perf.data
-    
-  
-
-
-A good pointer: here
-
-Opam
-
-Main commands...</summary>
+      Compare ...</summary>
 
   </entry>
 
@@ -111,9 +111,9 @@ Main commands...</summary>
   <entry>
     <title>Linux</title>
     <link href="/about-me/posts/linux/" rel="alternate" type="text/html" title="Linux" />
-    <published>2026-02-23T10:28:52+01:00</published>
+    <published>2026-11-25T12:26:08+01:00</published>
   
-    <updated>2026-02-23T10:27:41+01:00</updated>
+    <updated>2026-11-25T12:15:34+01:00</updated>
   
     <id>/about-me/posts/linux/</id>
     <content src="/about-me/posts/linux/" />
@@ -125,7 +125,7 @@ Main commands...</summary>
     
   
 
-  <summary>Useful commands
+  <summary>Useful Commands
 
 
   
@@ -136,41 +136,34 @@ Main commands...</summary>
   
   
     
-      Restart gnome shell
-      ALT + F2, then r
+      Restart GNOME Shell
+      Alt+F2, then enter r
     
     
-      Force kill process
+      Force-terminate a process
       kill -9 PID
     
     
-      Switch virtual console
-      CTRL + ALT + F1
+      Switch to virtual console 1
+      Ctrl+Alt+F1
     
     
-      Install deb
-      dpkg -i DEB_FILE
+      Install a Debian package
+      sudo dpkg -i DEB_FILE
     
     
-      Regex replace
-      echo ... \| sed &amp;#39;s/IN_REX/OUT_REX/&amp;#39;
-    
-  
-
-
-Hints on makefile
-
-# Create...</summary>
+      Replace text with a regular expression
+      echo &amp;quot;input&amp;quot; \| se...</summary>
 
   </entry>
 
   
   <entry>
-    <title>Latex</title>
-    <link href="/about-me/posts/latex/" rel="alternate" type="text/html" title="Latex" />
-    <published>2026-02-23T10:28:52+01:00</published>
+    <title>LaTeX</title>
+    <link href="/about-me/posts/latex/" rel="alternate" type="text/html" title="LaTeX" />
+    <published>2026-11-25T12:26:08+01:00</published>
   
-    <updated>2024-12-29T18:15:12+01:00</updated>
+    <updated>2026-11-25T12:15:34+01:00</updated>
   
     <id>/about-me/posts/latex/</id>
     <content src="/about-me/posts/latex/" />
@@ -182,31 +175,34 @@ Hints on makefile
     
   
 
-  <summary>A latex report template is here : link
+  <summary>The following templates provide reusable starting points:
 
-A latex presentation template is here : link
 
-Graphics and images
+  Report template
+  Presentation template
+
+
+Graphics and Images
+
 \begin{figure}[!htb]
   \centering
   \begin{subfigure}[b]{0.25\textwidth}
-    \includegraphics[width=\textwidth]{YOUR IMAGE PATH}
+    \includegraphics[width=\textwidth]{image-path}
     \caption{Caption 1}
-    \label{fig:Label1}
+    \label{fig:label-1}
   \end{subfigure}
   \begin{subfigure}[b]{0.25\textwidth}
-    \includegraphics[width=\textwidth]{YOUR IMAGE PATH}
-  ...</summary>
+    \includegraphics[width=\textwidth]{imag...</summary>
 
   </entry>
 
   
   <entry>
-    <title>Git &amp; Github</title>
-    <link href="/about-me/posts/github/" rel="alternate" type="text/html" title="Git &amp;amp; Github" />
-    <published>2026-02-23T10:28:52+01:00</published>
+    <title>Git and GitHub</title>
+    <link href="/about-me/posts/github/" rel="alternate" type="text/html" title="Git and GitHub" />
+    <published>2026-11-25T12:26:08+01:00</published>
   
-    <updated>2025-02-28T15:29:17+01:00</updated>
+    <updated>2026-11-25T12:15:34+01:00</updated>
   
     <id>/about-me/posts/github/</id>
     <content src="/about-me/posts/github/" />
@@ -218,7 +214,7 @@ Graphics and images
     
   
 
-  <summary>Main commands
+  <summary>Useful Commands
 
 
   
@@ -229,27 +225,23 @@ Graphics and images
   
   
     
-      Clean brute force
+      Remove untracked and ignored files
       git clean -dfx
     
     
-      All branch names
+      List all references
       git show-ref
     
     
-      Add worktree
+      Add an existing branch as a worktree
       git worktree add PATH EXISTING_BRANCH
     
     
-      Add worktree new branch
+      Add a new branch and worktree
       git worktree add -b NEW_BRANCH_NAME PATH
     
     
-      Fetch all
-      git fetch --all
-    
-    
-      Show...</summary>
+      ...</summary>
 
   </entry>
 

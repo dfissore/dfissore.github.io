@@ -29,23 +29,24 @@
 
   
 
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <!-- Begin Jekyll SEO tag v2.9.1 -->
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Linux" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Useful commands" />
-<meta property="og:description" content="Useful commands" />
+<meta name="description" content="Useful Commands" />
+<meta name="twitter:description" property="og:description" content="Useful Commands" />
 <link rel="canonical" href="/about-me/posts/linux/" />
 <meta property="og:url" content="/about-me/posts/linux/" />
 <meta property="og:site_name" content="Davide Fissore" />
 <meta property="og:image" content="/about-me/assets/img/logo_linux.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-02-23T10:28:52+01:00" />
+<meta property="article:published_time" content="2026-11-25T12:26:08+01:00" />
+<meta property="article:modified_time" content="2026-11-25T12:15:34+01:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="/about-me/assets/img/logo_linux.png" />
-<meta property="twitter:title" content="Linux" />
+<meta name="twitter:image" content="/about-me/assets/img/logo_linux.png" />
+<meta name="twitter:title" content="Linux" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-02-23T10:27:41+01:00","datePublished":"2026-02-23T10:28:52+01:00","description":"Useful commands","headline":"Linux","image":"/about-me/assets/img/logo_linux.png","mainEntityOfPage":{"@type":"WebPage","@id":"/about-me/posts/linux/"},"url":"/about-me/posts/linux/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-11-25T12:15:34+01:00","datePublished":"2026-11-25T12:26:08+01:00","description":"Useful Commands","headline":"Linux","image":"/about-me/assets/img/logo_linux.png","mainEntityOfPage":{"@type":"WebPage","@id":"/about-me/posts/linux/"},"url":"/about-me/posts/linux/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -255,7 +256,7 @@
     <h1 class="site-title">
       <a href="/about-me/">Davide Fissore</a>
     </h1>
-    <p class="site-subtitle fst-italic mb-0">PhD student in Computer Science</p>
+    <p class="site-subtitle fst-italic mb-0"></p>
   </header>
   <!-- .profile-wrapper -->
 
@@ -290,7 +291,7 @@
         </li>
         <!-- .nav-item -->
       
-        <li class="nav-item active">
+        <li class="nav-item">
           <a href="/about-me/posts/" class="nav-link">
             <i class="fa-fw fas fa-crosshairs"></i>
             
@@ -807,13 +808,13 @@
 
 <time
   
-  data-ts="1771838861"
+  data-ts="1795605334"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Feb 23, 2026
+  Nov 25, 2026
 </time>
 
         </span>
@@ -869,9 +870,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="631 words"
+  title="488 words"
 >
-  <em>3 min</em> read</span>
+  <em>2 min</em> read</span>
 
         </div>
       </div>
@@ -879,7 +880,7 @@
   </header>
 
   <div class="content">
-    <h2 id="useful-commands"><span class="me-2">Useful commands</span><a href="#useful-commands" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="useful-commands"><span class="me-2">Useful Commands</span><a href="#useful-commands" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -890,29 +891,43 @@
   </thead>
   <tbody>
     <tr>
-      <td>Restart gnome shell</td>
-      <td><code class="language-plaintext highlighter-rouge">ALT + F2, then r</code></td>
+      <td>Restart GNOME Shell</td>
+      <td><code class="language-plaintext highlighter-rouge">Alt+F2</code>, then enter <code class="language-plaintext highlighter-rouge">r</code></td>
     </tr>
     <tr>
-      <td>Force kill process</td>
+      <td>Force-terminate a process</td>
       <td><code class="language-plaintext highlighter-rouge">kill -9 PID</code></td>
     </tr>
     <tr>
-      <td>Switch virtual console</td>
-      <td><code class="language-plaintext highlighter-rouge">CTRL + ALT + F1</code></td>
+      <td>Switch to virtual console 1</td>
+      <td><code class="language-plaintext highlighter-rouge">Ctrl+Alt+F1</code></td>
     </tr>
     <tr>
-      <td>Install deb</td>
-      <td><code class="language-plaintext highlighter-rouge">dpkg -i DEB_FILE</code></td>
+      <td>Install a Debian package</td>
+      <td><code class="language-plaintext highlighter-rouge">sudo dpkg -i DEB_FILE</code></td>
     </tr>
     <tr>
-      <td>Regex replace</td>
-      <td><code class="language-plaintext highlighter-rouge">echo ... \| sed 's/IN_REX/OUT_REX/'</code></td>
+      <td>Replace text with a regular expression</td>
+      <td><code class="language-plaintext highlighter-rouge">echo "input" \| sed 's/IN_REGEX/OUT_REGEX/'</code></td>
     </tr>
   </tbody>
 </table></div>
 
-<h2 id="hints-on-makefile"><span class="me-2">Hints on makefile</span><a href="#hints-on-makefile" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="makefiles"><span class="me-2">Makefiles</span><a href="#makefiles" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p>Create a variable within a rule:</p>
+
+<div class="language-makefile highlighter-rouge"><div class="code-header">
+        <span data-label-text="Makefile"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nl">rule1</span><span class="o">:</span>
+  <span class="nl">$(eval VAR </span><span class="o">:</span><span class="nf">= $(shell YOUR_COMMAND))</span>
+  <span class="err">echo</span> <span class="err">$(VAR)</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>Build all <code class="language-plaintext highlighter-rouge">.tex</code> files and place the PDFs in <code class="language-plaintext highlighter-rouge">pdf/</code>:</p>
 
 <div class="language-makefile highlighter-rouge"><div class="code-header">
         <span data-label-text="Makefile"><i class="fas fa-code fa-fw small"></i></span>
@@ -924,62 +939,62 @@
 6
 7
 8
-9
-10
-11
-12
-</pre></td><td class="rouge-code"><pre><span class="c"># Create a local variable in a rule
-</span><span class="nl">rule1</span><span class="o">:</span>
-  <span class="nl">$(eval VAR </span><span class="o">:</span><span class="nf">= $(shell YOUR_COMMAND))</span>
-  <span class="err">echo</span> <span class="err">$(VAR)</span>
-
-<span class="c"># Apply rule to all tex files
-</span><span class="nv">RES_DIR</span> <span class="o">=</span> pdf
+</pre></td><td class="rouge-code"><pre><span class="nv">RES_DIR</span> <span class="o">=</span> pdf
 <span class="nv">SOURCES</span> <span class="o">=</span> <span class="p">$(</span>shell <span class="nb">ls</span> <span class="k">*</span>.tex<span class="p">)</span>
 <span class="nv">OBJECTS</span> <span class="o">=</span> <span class="p">$(</span>addprefix <span class="p">$(</span>RES_DIR<span class="p">)</span>/,<span class="p">$(</span>SOURCES:%.tex<span class="o">=</span>%.pdf<span class="p">))</span>
+
 <span class="nl">ci</span><span class="o">:</span> <span class="nf">$(OBJECTS)</span>
+
 <span class="nl">$(RES_DIR)/%.pdf</span><span class="o">:</span> <span class="nf">%.tex</span>
-  <span class="err">...</span>
+  <span class="err">pdflatex</span> <span class="nv">-output-directory</span><span class="o">=</span><span class="p">$(</span>RES_DIR<span class="p">)</span> <span class="nv">$&lt;</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<div class="table-wrapper"><table>
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th>Command</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Variable local to target</td>
-      <td><code class="language-plaintext highlighter-rouge">$(eval year := $(shell YOUR_COMMAND))</code></td>
-    </tr>
-  </tbody>
-</table></div>
+<p>Variables evaluated with <code class="language-plaintext highlighter-rouge">eval</code> are local to the target:</p>
 
-<h2 id="useful-packages"><span class="me-2">Useful packages</span><a href="#useful-packages" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<div class="language-makefile highlighter-rouge"><div class="code-header">
+        <span data-label-text="Makefile"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nl">show-year</span><span class="o">:</span>
+  <span class="nl">$(eval year </span><span class="o">:</span><span class="nf">= $(shell date +%Y))</span>
+  <span class="err">echo</span> <span class="err">$(year)</span>
+</pre></td></tr></tbody></table></code></div></div>
 
-<p>In the following sections some packages I find quite useful</p>
+<h2 id="useful-packages"><span class="me-2">Useful Packages</span><a href="#useful-packages" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <h3 id="zsh"><span class="me-2">Zsh</span><a href="#zsh" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p><strong>zsh</strong> is an alternative to the bash terminal, it has a powerful autocompletion
-engine. It can be installed trough <code class="language-plaintext highlighter-rouge">sudo apt-get install zsh</code> and can be set
-as default terminal with <code class="language-plaintext highlighter-rouge">chsh -s $(which zsh)</code>. I have experienced some
-troubles with this command and a small hack to solve this problem is to run the
-following line of code.</p>
+<p>Zsh is a shell with powerful completion and history features. Install it with:</p>
 
 <div class="language-bash highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nb">echo</span> <span class="nt">-e</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">export SHELL=</span><span class="se">\"</span><span class="s2">/usr/bin/zsh</span><span class="se">\"</span><span class="s2">"</span> <span class="o">&gt;&gt;</span> <span class="nv">$HOME</span>/.profile
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt-get <span class="nb">install </span>zsh
 </pre></td></tr></tbody></table></code></div></div>
 
-<blockquote class="prompt-info">
-  <p>File with a custom version to be sourced in .zshrc is <a href="/about-me/assets/lib/myzshrc">here</a></p>
-</blockquote>
+<p>Make Zsh the default shell:</p>
 
-<h4 id="set-keybindings-for-history-search"><span class="me-2">Set keybindings for history search</span><a href="#set-keybindings-for-history-search" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>chsh <span class="nt">-s</span> <span class="s2">"</span><span class="si">$(</span>which zsh<span class="si">)</span><span class="s2">"</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>If Zsh is not selected in the login environment, add the following entry to
+<code class="language-plaintext highlighter-rouge">~/.profile</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">echo</span> <span class="s1">'\nexport SHELL="/usr/bin/zsh"'</span> <span class="o">&gt;&gt;</span> <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.profile"</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>A custom Zsh configuration is available
+<a href="/about-me/assets/lib/myzshrc">here</a>.</p>
+
+<h4 id="search-command-history-by-key-binding"><span class="me-2">Search command history by key binding</span><a href="#search-command-history-by-key-binding" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
 <div class="language-bash highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -994,28 +1009,33 @@ bindkey <span class="s2">"^[[5~"</span> history-beginning-search-backward-end
 bindkey <span class="s2">"^[[6~"</span> history-beginning-search-forward-end
 </pre></td></tr></tbody></table></code></div></div>
 
-<blockquote>
-  <p>To get the keycode associated to a key, enter the command <code class="language-plaintext highlighter-rouge">cat</code> in a terminal 
-end then type the wanted key</p>
-</blockquote>
+<p>To inspect a key sequence, run <code class="language-plaintext highlighter-rouge">cat</code> in a terminal and press the desired keys.</p>
 
-<h3 id="copyq"><span class="me-2">Copyq</span><a href="#copyq" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="copyq"><span class="me-2">CopyQ</span><a href="#copyq" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>Copy/paste is a feature daily used on computers. The <strong>copyq</strong> package allows to
-keep in memory the list of all the copied texts so that you can paste them in a
-second moment. It can be installed through <code class="language-plaintext highlighter-rouge">sudo apt-get install copyq</code>. This
-package can be launched at boot by adding the
-command <strong><code class="language-plaintext highlighter-rouge">copyq --start-server</code></strong> in the list of startup applications.</p>
+<p>CopyQ keeps a searchable history of copied text and files. Install it with:</p>
+
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt-get <span class="nb">install </span>copyq
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>To start the CopyQ server automatically at login, add the following command to
+your desktop environment’s startup applications:</p>
+
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>copyq <span class="nt">--start-server</span>
+</pre></td></tr></tbody></table></code></div></div>
 
 <h3 id="pandoc"><span class="me-2">Pandoc</span><a href="#pandoc" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>Latex is a standard package to render professional and readable pdf files. It is
-sometime the case that setting up all the configuration for a latex environment
-is not so practical. An alternative to this is to use the <strong>pandoc</strong> package
-which allows to <em>convert markdown files into pdf</em> using the latex engine. Pandoc
-is also capable to convert md files into html.</p>
+<p>Pandoc converts Markdown documents into PDF or HTML. It can use a LaTeX engine
+for PDF output.</p>
 
-<p>To render html files, I usually run:</p>
+<p>To generate a standalone HTML document:</p>
 
 <div class="language-bash highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
@@ -1024,44 +1044,36 @@ is also capable to convert md files into html.</p>
 3
 4
 5
-</pre></td><td class="rouge-code"><pre>pandoc <span class="nt">--toc</span> <span class="nt">--number-sections</span> <span class="nt">-s</span> <span class="nt">--embed-resources</span> <span class="nt">--standalone</span>  <span class="se">\</span>
-  inFile                                                          <span class="se">\</span>
-  <span class="nt">--mathjax</span><span class="o">=</span>path2/tex-chtml-full.js                               <span class="se">\</span>
-  <span class="nt">--include-in-header</span><span class="o">=</span>path2/header.html                           <span class="se">\</span>
-  <span class="nt">--lua-filter</span><span class="o">=</span>path2/luaFile.lua
+6
+</pre></td><td class="rouge-code"><pre>pandoc <span class="nt">--toc</span> <span class="nt">--number-sections</span> <span class="nt">--standalone</span> <span class="nt">--embed-resources</span> <span class="se">\</span>
+  input.md <span class="se">\</span>
+  <span class="nt">--mathjax</span><span class="o">=</span>path/to/tex-chtml-full.js <span class="se">\</span>
+  <span class="nt">--include-in-header</span><span class="o">=</span>path/to/header.html <span class="se">\</span>
+  <span class="nt">--lua-filter</span><span class="o">=</span>path/to/filter.lua <span class="se">\</span>
+  <span class="nt">-o</span> output.html
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>where</p>
-
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">inFile</code> is the markdown file to be rendered in html</li>
-  <li><code class="language-plaintext highlighter-rouge">tex-chtml-full.js</code> is the js file allowing to render mathjax in html</li>
-  <li><code class="language-plaintext highlighter-rouge">header.html</code> contains some html code to be added in the header of the
-rendered html</li>
-  <li><code class="language-plaintext highlighter-rouge">luaFile.lua</code> is a lua file allowing to preprocess the markdown file before
-the html rendering is done</li>
-</ol>
-
-<blockquote class="prompt-info">
-  <p>The list of options passed to the pandoc command produces a standalone html
-document with <code class="language-plaintext highlighter-rouge">toc</code> and where the sections are numbered</p>
-</blockquote>
-
-<h3 id="miscellaneous"><span class="me-2">Miscellaneous</span><a href="#miscellaneous" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
 <ul>
-  <li><strong>Opam</strong> is the package manager used for ocaml projects. The following post gives
-more details about how you can deal with it, see <a href="/about-me/posts/opam">here</a></li>
-  <li><strong>python-is-python3</strong> allowing to call <code class="language-plaintext highlighter-rouge">python</code> is the terminal instead of
-<code class="language-plaintext highlighter-rouge">python3</code></li>
-  <li><strong>VSCode</strong> on of the most used IDE worldwide (the package name is <code class="language-plaintext highlighter-rouge">code</code>)</li>
-  <li><strong>pygments</strong> is a python extension to compile <code class="language-plaintext highlighter-rouge">minted</code> code of tex files</li>
+  <li><code class="language-plaintext highlighter-rouge">input.md</code> is the Markdown source file.</li>
+  <li><code class="language-plaintext highlighter-rouge">tex-chtml-full.js</code> enables MathJax support.</li>
+  <li><code class="language-plaintext highlighter-rouge">header.html</code> contains HTML included in the document header.</li>
+  <li><code class="language-plaintext highlighter-rouge">filter.lua</code> preprocesses the document.</li>
+  <li><code class="language-plaintext highlighter-rouge">--toc</code> adds a table of contents and <code class="language-plaintext highlighter-rouge">--number-sections</code> numbers the headings.</li>
 </ul>
 
-<h2 id="install-the-previous-packages"><span class="me-2">Install the previous packages</span><a href="#install-the-previous-packages" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="other-useful-packages"><span class="me-2">Other Useful Packages</span><a href="#other-useful-packages" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>In a new computer, I usually run the following list of command to install the
-packages/scripts mentioned above. I also initialize <code class="language-plaintext highlighter-rouge">opam</code></p>
+<ul>
+  <li><strong>OPAM</strong> manages OCaml projects and compiler switches. See the <a href="/about-me/posts/ocaml">OCaml post</a>.</li>
+  <li><strong>python-is-python3</strong> makes <code class="language-plaintext highlighter-rouge">python</code> invoke <code class="language-plaintext highlighter-rouge">python3</code>.</li>
+  <li><strong>VS Code</strong> is an editor available through the <code class="language-plaintext highlighter-rouge">code</code> package.</li>
+  <li><strong>Pygments</strong> provides syntax highlighting for LaTeX’s <code class="language-plaintext highlighter-rouge">minted</code> package.</li>
+</ul>
+
+<h2 id="install-common-packages"><span class="me-2">Install Common Packages</span><a href="#install-common-packages" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p>On a new Ubuntu installation, the following commands install several frequently
+used tools and initialize OPAM:</p>
 
 <div class="language-bash highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
@@ -1075,40 +1087,48 @@ packages/scripts mentioned above. I also initialize <code class="language-plaint
 8
 9
 10
-</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="se">\</span>
-  code zsh python-is-python3 <span class="se">\</span>
-  opam copyq texlive-latex-extra python3-pip <span class="o">&amp;&amp;</span>
+11
+12
+13
+14
+15
+16
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt-get update
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> <span class="se">\</span>
+  code zsh python-is-python3 opam copyq texlive-latex-extra python3-pip
+
 wget <span class="se">\</span>
   <span class="s2">"https://github.com/jgm/pandoc/releases/download/3.1.9/pandoc-3.1.9-1-amd64.deb"</span> <span class="se">\</span>
-  <span class="s2">"https://fissored.github.io/MyHelp/zip/battery_health"</span>
-  <span class="s2">"https://fissored.github.io/MyHelp/zip/opam_switch_coq_elpi.txt"</span> <span class="o">&amp;&amp;</span>
-<span class="nb">mv</span> ./battery_health /home/<span class="nv">$USER</span> <span class="se">\</span>
-pip <span class="nb">install </span>pygments <span class="se">\</span>
+  <span class="s2">"https://fissored.github.io/MyHelp/zip/battery_health"</span> <span class="se">\</span>
+  <span class="s2">"https://fissored.github.io/MyHelp/zip/opam_switch_coq_elpi.txt"</span>
+
+<span class="nb">mv </span>battery_health <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/battery_health"</span>
+<span class="nb">chmod </span>u+x <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/battery_health"</span>
+python3 <span class="nt">-m</span> pip <span class="nb">install </span>pygments
 <span class="nb">sudo </span>dpkg <span class="nt">-i</span> pandoc-3.1.9-1-amd64.deb
-</pre></td></tr></tbody></table></code></div></div>
-<blockquote class="prompt-info">
-  <p><code class="language-plaintext highlighter-rouge">battery_alert</code> is documented <a href="/about-me/posts/scripts#battery-alert">here</a></p>
-</blockquote>
 
-<h2 id="miscellaneous-1"><span class="me-2">Miscellaneous</span><a href="#miscellaneous-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<p>Set local time:</p>
+opam init <span class="nt">--disable-sandboxing</span>
+opam switch create default ocaml-system
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>The battery script is documented in <a href="/about-me/posts/scripts#battery-alert">My Scripts</a>.</p>
+
+<h2 id="locale-settings"><span class="me-2">Locale Settings</span><a href="#locale-settings" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p>Set the local time format:</p>
 
 <div class="language-bash highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nb">echo</span> <span class="nt">-e</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">export LC_TIME=</span><span class="se">\"</span><span class="s2">en_IE.utf8</span><span class="se">\"</span><span class="s2">"</span> <span class="o">&gt;&gt;</span> <span class="nv">$HOME</span>/.profile
+</pre></td><td class="rouge-code"><pre><span class="nb">echo</span> <span class="s1">'\nexport LC_TIME="en_IE.UTF-8"'</span> <span class="o">&gt;&gt;</span> <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.profile"</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<blockquote>
-  <p><code class="language-plaintext highlighter-rouge">en_IE.utf8</code> is for <em>English, Ireland</em></p>
-</blockquote>
-
-<p>Set local paper size:</p>
+<p>Set the local paper size:</p>
 
 <div class="language-bash highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nb">echo</span> <span class="nt">-e</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">export LC_PAPER=</span><span class="se">\"</span><span class="s2">en_GB.UTF-8</span><span class="se">\"</span><span class="s2">"</span> <span class="o">&gt;&gt;</span> <span class="nv">$HOME</span>/.profile
+</pre></td><td class="rouge-code"><pre><span class="nb">echo</span> <span class="s1">'\nexport LC_PAPER="en_GB.UTF-8"'</span> <span class="o">&gt;&gt;</span> <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.profile"</span>
 </pre></td></tr></tbody></table></code></div></div>
 
   </div>
