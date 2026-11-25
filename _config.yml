@@ -23,7 +23,7 @@ description: >- # used by seo meta and the atom feed
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: ""
+url: "https://dfissore.github.io"
 
 github:
   username: dfissore # change to your GitHub username
@@ -143,7 +143,7 @@ paginate: 10
 
 # The base URL of your site
 # note: should also add the baseurl in head.html
-baseurl: "dfissore.github.io/"
+baseurl: "/"
 
 # ------------ The following options are not recommended to be modified ------------------
 
