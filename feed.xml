@@ -4,7 +4,7 @@
   <id>https://dfissore.github.io/</id>
   <title>Davide Fissore</title>
   <subtitle>dfissore</subtitle>
-  <updated>2026-11-25T16:34:58+01:00</updated>
+  <updated>2026-11-25T16:39:37+01:00</updated>
   <author>
     <name>Davide Fissore</name>
     <uri>https://dfissore.github.io/</uri>
@@ -22,9 +22,9 @@
   <entry>
     <title>My Scripts</title>
     <link href="https://dfissore.github.io/posts/scripts/" rel="alternate" type="text/html" title="My Scripts" />
-    <published>2026-11-25T16:34:58+01:00</published>
+    <published>2026-11-25T16:39:37+01:00</published>
   
-    <updated>2026-11-25T12:15:34+01:00</updated>
+    <updated>2026-11-25T16:38:35+01:00</updated>
   
     <id>https://dfissore.github.io/posts/scripts/</id>
     <content src="https://dfissore.github.io/posts/scripts/" />
@@ -68,9 +68,9 @@ A Bash script ch...</summary>
   <entry>
     <title>OCaml and OPAM</title>
     <link href="https://dfissore.github.io/posts/ocaml/" rel="alternate" type="text/html" title="OCaml and OPAM" />
-    <published>2026-11-25T16:34:58+01:00</published>
+    <published>2026-11-25T16:39:37+01:00</published>
   
-    <updated>2026-11-25T12:15:34+01:00</updated>
+    <updated>2026-11-25T16:38:35+01:00</updated>
   
     <id>https://dfissore.github.io/posts/ocaml/</id>
     <content src="https://dfissore.github.io/posts/ocaml/" />
@@ -111,9 +111,9 @@ Linux perf can profile OCaml executables and collect call-graph information:
   <entry>
     <title>Linux</title>
     <link href="https://dfissore.github.io/posts/linux/" rel="alternate" type="text/html" title="Linux" />
-    <published>2026-11-25T16:34:58+01:00</published>
+    <published>2026-11-25T16:39:37+01:00</published>
   
-    <updated>2026-11-25T12:36:20+01:00</updated>
+    <updated>2026-11-25T16:38:35+01:00</updated>
   
     <id>https://dfissore.github.io/posts/linux/</id>
     <content src="https://dfissore.github.io/posts/linux/" />
@@ -161,9 +161,9 @@ Linux perf can profile OCaml executables and collect call-graph information:
   <entry>
     <title>LaTeX</title>
     <link href="https://dfissore.github.io/posts/latex/" rel="alternate" type="text/html" title="LaTeX" />
-    <published>2026-11-25T16:34:58+01:00</published>
+    <published>2026-11-25T16:39:37+01:00</published>
   
-    <updated>2026-11-25T12:15:34+01:00</updated>
+    <updated>2026-11-25T16:38:35+01:00</updated>
   
     <id>https://dfissore.github.io/posts/latex/</id>
     <content src="https://dfissore.github.io/posts/latex/" />
@@ -200,9 +200,9 @@ Graphics and Images
   <entry>
     <title>Git and GitHub</title>
     <link href="https://dfissore.github.io/posts/github/" rel="alternate" type="text/html" title="Git and GitHub" />
-    <published>2026-11-25T16:34:58+01:00</published>
+    <published>2026-11-25T16:39:37+01:00</published>
   
-    <updated>2026-11-25T12:15:34+01:00</updated>
+    <updated>2026-11-25T16:38:35+01:00</updated>
   
     <id>https://dfissore.github.io/posts/github/</id>
     <content src="https://dfissore.github.io/posts/github/" />
