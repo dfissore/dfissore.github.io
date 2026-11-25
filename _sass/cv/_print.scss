@@ -9,11 +9,10 @@
     }
 
     img.avatar {
-        filter: grayscale(1);
-        -webkit-filter: greyscale(1);
+      //   filter: grayscale(1);
+      //   -webkit-filter: greyscale(1);
     }
    .main-wrapper .time {
-      z-index: 1000;
       color: black !important;
       white-space: nowrap;
       position: absolute !important;
@@ -24,7 +23,7 @@
     .sidebar-wrapper {
         position: static;
         float: left;
-        min-height: 297mm; 
+        min-height: 270mm; 
         width: 40%;
         -webkit-print-color-adjust: exact; 
     }
@@ -37,14 +36,8 @@
        display: none;
     }
 
-    .skillset .level-bar-inner {
-       background-color: black !important;
-       -webkit-print-color-adjust: exact; 
-    }
+   li.pdf {
+    display: none !important;
+  }
 
-   .fa-inverse,
-   .fa-inverse:after,
-   .fa-inverse:before {
-     color: #ffffff !important;
-   }
 }

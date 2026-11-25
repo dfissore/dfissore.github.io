@@ -8,20 +8,9 @@ order: 1
 
 ## About me
 
-I am a PhD student at the
-[Inria](https://www.inria.fr/fr/centre-inria-universite-cote-azur) center of
-Sophia Antipolis in the [STAMP](https://team.inria.fr/stamp/) team under the
-supervision of [Yves Bertot](https://www-sop.inria.fr/members/Yves.Bertot/) and
-[Enrico Tassi](https://www-sop.inria.fr/members/Enrico.Tassi/).
-
-## My interest
-
-I like to challenge myself with any kind of puzzle such as the Rubik's cube or
-the game of Chess. In my free time I like to participate to coding battle since,
-after all, they are puzzles!
-
-I like to listen to music especially music played on piano, such as the great
-masterpieces of composers like Bach and Beethoven.
+Creative and curious, I like theoretical and practical computer science. I’m
+interested in strongly typed programming languages which use logic or functional
+programming paradigms.
 
 
 <!-- ## Some words about my research
