@@ -139,8 +139,8 @@ sudo apt-get install -y \
 
 wget \
   "https://github.com/jgm/pandoc/releases/download/3.1.9/pandoc-3.1.9-1-amd64.deb" \
-  "https://fissored.github.io/MyHelp/zip/battery_health" \
-  "https://fissored.github.io/MyHelp/zip/opam_switch_coq_elpi.txt"
+  "https://dfissore.github.io/MyHelp/zip/battery_health" \
+  "https://dfissore.github.io/MyHelp/zip/opam_switch_coq_elpi.txt"
 
 mv battery_health "$HOME/battery_health"
 chmod u+x "$HOME/battery_health"

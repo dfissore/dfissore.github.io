@@ -20,7 +20,7 @@ sidebar:
   website: #do not add http://
   linkedin: davide-fissore
   xing:
-  github: fissored
+  github: dfissore
   telegram: # add your nickname without '@' sign
   gitlab:
   bitbucket:
@@ -157,7 +157,7 @@ projects:
   #   section. Feel free to provide a brief introduction.
   assignments:
     - title: Elpi Formalization
-      link: https://github.com/FissoreD/elpi-formalization
+      link: https://github.com/dfissore/elpi-formalization
       tagline: |
         A formalization of the Elpi programming language in Rocq.
     - title: tc - A type-class solver for Rocq in Elpi
@@ -167,12 +167,12 @@ projects:
         [coq-elpi](https://github.com/LPCIC/coq-elpi) framework (the subject of my
         PhD thesis).
     - title: Learning-and-More
-      link: https://fissored.github.io/Learning-And-More?Home
+      link: https://dfissore.github.io/Learning-And-More?Home
       tagline: |
         A collection of active-learning algorithms, ranging from Angluin's
         **L*** algorithm to **TTT-VPA**.
     - title: All Interval Series
-      link: https://github.com/FissoreD/All-Intervall-Series
+      link: https://github.com/dfissore/All-Intervall-Series
       tagline: |
         A Java solver using
         [Choco-solver](https://github.com/chocoteam/choco-solver), evaluating
