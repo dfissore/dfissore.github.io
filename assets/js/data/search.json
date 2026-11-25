@@ -2,10 +2,10 @@
   
   {
     "title": "My Scripts",
-    "url": "/about-me/posts/scripts/",
+    "url": "/posts/scripts/",
     "categories": "",
     "tags": "",
-    "date": "2026-11-25 12:26:08 +0100",
+    "date": "2026-11-25 12:38:33 +0100",
     
 
 
@@ -19,10 +19,10 @@
   
   {
     "title": "OCaml and OPAM",
-    "url": "/about-me/posts/ocaml/",
+    "url": "/posts/ocaml/",
     "categories": "",
     "tags": "",
-    "date": "2026-11-25 12:26:08 +0100",
+    "date": "2026-11-25 12:38:33 +0100",
     
 
 
@@ -36,10 +36,10 @@
   
   {
     "title": "Linux",
-    "url": "/about-me/posts/linux/",
+    "url": "/posts/linux/",
     "categories": "",
     "tags": "",
-    "date": "2026-11-25 12:26:08 +0100",
+    "date": "2026-11-25 12:38:33 +0100",
     
 
 
@@ -48,15 +48,15 @@
 
     
     "snippet": "Useful Commands            Description      Command                  Restart GNOME Shell      Alt+F2, then enter r              Force-terminate a process      kill -9 PID              Switch to vir...",
-    "content": "Useful Commands            Description      Command                  Restart GNOME Shell      Alt+F2, then enter r              Force-terminate a process      kill -9 PID              Switch to virtual console 1      Ctrl+Alt+F1              Install a Debian package      sudo dpkg -i DEB_FILE              Replace text with a regular expression      echo \"input\" \\| sed 's/IN_REGEX/OUT_REGEX/'      MakefilesCreate a variable within a rule:rule1:  $(eval VAR := $(shell YOUR_COMMAND))  echo $(VAR)Build all .tex files and place the PDFs in pdf/:RES_DIR = pdfSOURCES = $(shell ls *.tex)OBJECTS = $(addprefix $(RES_DIR)/,$(SOURCES:%.tex=%.pdf))ci: $(OBJECTS)$(RES_DIR)/%.pdf: %.tex  pdflatex -output-directory=$(RES_DIR) $&lt;Variables evaluated with eval are local to the target:show-year:  $(eval year := $(shell date +%Y))  echo $(year)Useful PackagesZshZsh is a shell with powerful completion and history features. Install it with:sudo apt-get install zshMake Zsh the default shell:chsh -s \"$(which zsh)\"If Zsh is not selected in the login environment, add the following entry to~/.profile:echo '\\nexport SHELL=\"/usr/bin/zsh\"' &gt;&gt; \"$HOME/.profile\"A custom Zsh configuration is availablehere.Search command history by key bindingautoload -U history-search-endzle -N history-beginning-search-backward-end history-search-endzle -N history-beginning-search-forward-end history-search-endbindkey \"^[[5~\" history-beginning-search-backward-endbindkey \"^[[6~\" history-beginning-search-forward-endTo inspect a key sequence, run cat in a terminal and press the desired keys.CopyQCopyQ keeps a searchable history of copied text and files. Install it with:sudo apt-get install copyqTo start the CopyQ server automatically at login, add the following command toyour desktop environment’s startup applications:copyq --start-serverPandocPandoc converts Markdown documents into PDF or HTML. It can use a LaTeX enginefor PDF output.To generate a standalone HTML document:pandoc --toc --number-sections --standalone --embed-resources \\  input.md \\  --mathjax=path/to/tex-chtml-full.js \\  --include-in-header=path/to/header.html \\  --lua-filter=path/to/filter.lua \\  -o output.html  input.md is the Markdown source file.  tex-chtml-full.js enables MathJax support.  header.html contains HTML included in the document header.  filter.lua preprocesses the document.  --toc adds a table of contents and --number-sections numbers the headings.Other Useful Packages  OPAM manages OCaml projects and compiler switches. See the OCaml post.  python-is-python3 makes python invoke python3.  VS Code is an editor available through the code package.  Pygments provides syntax highlighting for LaTeX’s minted package.Install Common PackagesOn a new Ubuntu installation, the following commands install several frequentlyused tools and initialize OPAM:sudo apt-get updatesudo apt-get install -y \\  code zsh python-is-python3 opam copyq texlive-latex-extra python3-pipwget \\  \"https://github.com/jgm/pandoc/releases/download/3.1.9/pandoc-3.1.9-1-amd64.deb\" \\  \"https://fissored.github.io/MyHelp/zip/battery_health\" \\  \"https://fissored.github.io/MyHelp/zip/opam_switch_coq_elpi.txt\"mv battery_health \"$HOME/battery_health\"chmod u+x \"$HOME/battery_health\"python3 -m pip install pygmentssudo dpkg -i pandoc-3.1.9-1-amd64.debopam init --disable-sandboxingopam switch create default ocaml-systemThe battery script is documented in My Scripts.Locale SettingsSet the local time format:echo '\\nexport LC_TIME=\"en_IE.UTF-8\"' &gt;&gt; \"$HOME/.profile\"Set the local paper size:echo '\\nexport LC_PAPER=\"en_GB.UTF-8\"' &gt;&gt; \"$HOME/.profile\""
+    "content": "Useful Commands            Description      Command                  Restart GNOME Shell      Alt+F2, then enter r              Force-terminate a process      kill -9 PID              Switch to virtual console 1      Ctrl+Alt+F1              Install a Debian package      sudo dpkg -i DEB_FILE              Replace text with a regular expression      echo \"input\" \\| sed 's/IN_REGEX/OUT_REGEX/'      MakefilesCreate a variable within a rule:rule1:  $(eval VAR := $(shell YOUR_COMMAND))  echo $(VAR)Build all .tex files and place the PDFs in pdf/:RES_DIR = pdfSOURCES = $(shell ls *.tex)OBJECTS = $(addprefix $(RES_DIR)/,$(SOURCES:%.tex=%.pdf))ci: $(OBJECTS)$(RES_DIR)/%.pdf: %.tex  pdflatex -output-directory=$(RES_DIR) $&lt;Variables evaluated with eval are local to the target:show-year:  $(eval year := $(shell date +%Y))  echo $(year)Useful PackagesZshZsh is a shell with powerful completion and history features. Install it with:sudo apt-get install zshMake Zsh the default shell:chsh -s \"$(which zsh)\"If Zsh is not selected in the login environment, add the following entry to~/.profile:echo '\\nexport SHELL=\"/usr/bin/zsh\"' &gt;&gt; \"$HOME/.profile\"A custom Zsh configuration is availablehere.Search command history by key bindingautoload -U history-search-endzle -N history-beginning-search-backward-end history-search-endzle -N history-beginning-search-forward-end history-search-endbindkey \"^[[5~\" history-beginning-search-backward-endbindkey \"^[[6~\" history-beginning-search-forward-endTo inspect a key sequence, run cat in a terminal and press the desired keys.CopyQCopyQ keeps a searchable history of copied text and files. Install it with:sudo apt-get install copyqTo start the CopyQ server automatically at login, add the following command toyour desktop environment’s startup applications:copyq --start-serverPandocPandoc converts Markdown documents into PDF or HTML. It can use a LaTeX enginefor PDF output.To generate a standalone HTML document:pandoc --toc --number-sections --standalone --embed-resources \\  input.md \\  --mathjax=path/to/tex-chtml-full.js \\  --include-in-header=path/to/header.html \\  --lua-filter=path/to/filter.lua \\  -o output.html  input.md is the Markdown source file.  tex-chtml-full.js enables MathJax support.  header.html contains HTML included in the document header.  filter.lua preprocesses the document.  --toc adds a table of contents and --number-sections numbers the headings.Other Useful Packages  OPAM manages OCaml projects and compiler switches. See the OCaml post.  python-is-python3 makes python invoke python3.  VS Code is an editor available through the code package.  Pygments provides syntax highlighting for LaTeX’s minted package.Install Common PackagesOn a new Ubuntu installation, the following commands install several frequentlyused tools and initialize OPAM:sudo apt-get updatesudo apt-get install -y \\  code zsh python-is-python3 opam copyq texlive-latex-extra python3-pipwget \\  \"https://github.com/jgm/pandoc/releases/download/3.1.9/pandoc-3.1.9-1-amd64.deb\" \\  \"https://dfissore.github.io/MyHelp/zip/battery_health\" \\  \"https://dfissore.github.io/MyHelp/zip/opam_switch_coq_elpi.txt\"mv battery_health \"$HOME/battery_health\"chmod u+x \"$HOME/battery_health\"python3 -m pip install pygmentssudo dpkg -i pandoc-3.1.9-1-amd64.debopam init --disable-sandboxingopam switch create default ocaml-systemThe battery script is documented in My Scripts.Locale SettingsSet the local time format:echo '\\nexport LC_TIME=\"en_IE.UTF-8\"' &gt;&gt; \"$HOME/.profile\"Set the local paper size:echo '\\nexport LC_PAPER=\"en_GB.UTF-8\"' &gt;&gt; \"$HOME/.profile\""
   },
   
   {
     "title": "LaTeX",
-    "url": "/about-me/posts/latex/",
+    "url": "/posts/latex/",
     "categories": "",
     "tags": "",
-    "date": "2026-11-25 12:26:08 +0100",
+    "date": "2026-11-25 12:38:33 +0100",
     
 
 
@@ -70,10 +70,10 @@
   
   {
     "title": "Git and GitHub",
-    "url": "/about-me/posts/github/",
+    "url": "/posts/github/",
     "categories": "",
     "tags": "",
-    "date": "2026-11-25 12:26:08 +0100",
+    "date": "2026-11-25 12:38:33 +0100",
     
 
 
@@ -87,10 +87,10 @@
   
   {
     "title": "Docker",
-    "url": "/about-me/posts/docker/",
+    "url": "/posts/docker/",
     "categories": "",
     "tags": "",
-    "date": "2026-11-25 12:26:08 +0100",
+    "date": "2026-11-25 12:38:33 +0100",
     
 
 

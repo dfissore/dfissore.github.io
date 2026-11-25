@@ -1,33 +1,33 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>/about-me/</id>
+  <id>/</id>
   <title>Davide Fissore</title>
-  <subtitle>FissoreD</subtitle>
-  <updated>2026-11-25T12:26:08+01:00</updated>
+  <subtitle>dfissore</subtitle>
+  <updated>2026-11-25T12:38:33+01:00</updated>
   <author>
     <name>Davide Fissore</name>
-    <uri>/about-me/</uri>
+    <uri>/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="/about-me/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
-    href="/about-me/"/>
+    href="/"/>
   <generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator>
   <rights> © 2026 Davide Fissore </rights>
-  <icon>/about-me/assets/img/favicons/favicon.ico</icon>
-  <logo>/about-me/assets/img/favicons/favicon-96x96.png</logo>
+  <icon>//assets/img/favicons/favicon.ico</icon>
+  <logo>//assets/img/favicons/favicon-96x96.png</logo>
 
 
   
   <entry>
     <title>My Scripts</title>
-    <link href="/about-me/posts/scripts/" rel="alternate" type="text/html" title="My Scripts" />
-    <published>2026-11-25T12:26:08+01:00</published>
+    <link href="/posts/scripts/" rel="alternate" type="text/html" title="My Scripts" />
+    <published>2026-11-25T12:38:33+01:00</published>
   
     <updated>2026-11-25T12:15:34+01:00</updated>
   
-    <id>/about-me/posts/scripts/</id>
-    <content src="/about-me/posts/scripts/" />
+    <id>/posts/scripts/</id>
+    <content src="/posts/scripts/" />
     <author>
       <name>Davide Fissore</name>
     </author>
@@ -67,13 +67,13 @@ A Bash script ch...</summary>
   
   <entry>
     <title>OCaml and OPAM</title>
-    <link href="/about-me/posts/ocaml/" rel="alternate" type="text/html" title="OCaml and OPAM" />
-    <published>2026-11-25T12:26:08+01:00</published>
+    <link href="/posts/ocaml/" rel="alternate" type="text/html" title="OCaml and OPAM" />
+    <published>2026-11-25T12:38:33+01:00</published>
   
     <updated>2026-11-25T12:15:34+01:00</updated>
   
-    <id>/about-me/posts/ocaml/</id>
-    <content src="/about-me/posts/ocaml/" />
+    <id>/posts/ocaml/</id>
+    <content src="/posts/ocaml/" />
     <author>
       <name>Davide Fissore</name>
     </author>
@@ -110,13 +110,13 @@ Linux perf can profile OCaml executables and collect call-graph information:
   
   <entry>
     <title>Linux</title>
-    <link href="/about-me/posts/linux/" rel="alternate" type="text/html" title="Linux" />
-    <published>2026-11-25T12:26:08+01:00</published>
+    <link href="/posts/linux/" rel="alternate" type="text/html" title="Linux" />
+    <published>2026-11-25T12:38:33+01:00</published>
   
-    <updated>2026-11-25T12:15:34+01:00</updated>
+    <updated>2026-11-25T12:36:20+01:00</updated>
   
-    <id>/about-me/posts/linux/</id>
-    <content src="/about-me/posts/linux/" />
+    <id>/posts/linux/</id>
+    <content src="/posts/linux/" />
     <author>
       <name>Davide Fissore</name>
     </author>
@@ -160,13 +160,13 @@ Linux perf can profile OCaml executables and collect call-graph information:
   
   <entry>
     <title>LaTeX</title>
-    <link href="/about-me/posts/latex/" rel="alternate" type="text/html" title="LaTeX" />
-    <published>2026-11-25T12:26:08+01:00</published>
+    <link href="/posts/latex/" rel="alternate" type="text/html" title="LaTeX" />
+    <published>2026-11-25T12:38:33+01:00</published>
   
     <updated>2026-11-25T12:15:34+01:00</updated>
   
-    <id>/about-me/posts/latex/</id>
-    <content src="/about-me/posts/latex/" />
+    <id>/posts/latex/</id>
+    <content src="/posts/latex/" />
     <author>
       <name>Davide Fissore</name>
     </author>
@@ -199,13 +199,13 @@ Graphics and Images
   
   <entry>
     <title>Git and GitHub</title>
-    <link href="/about-me/posts/github/" rel="alternate" type="text/html" title="Git and GitHub" />
-    <published>2026-11-25T12:26:08+01:00</published>
+    <link href="/posts/github/" rel="alternate" type="text/html" title="Git and GitHub" />
+    <published>2026-11-25T12:38:33+01:00</published>
   
     <updated>2026-11-25T12:15:34+01:00</updated>
   
-    <id>/about-me/posts/github/</id>
-    <content src="/about-me/posts/github/" />
+    <id>/posts/github/</id>
+    <content src="/posts/github/" />
     <author>
       <name>Davide Fissore</name>
     </author>
