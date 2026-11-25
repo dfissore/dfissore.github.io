@@ -1,39 +1,57 @@
 ---
-title: "My scripts"
+title: "My Scripts"
 image:
   path: /assets/img/logo_script.png
 ...
 
-## Remove tags from mp3 file
+## Remove MP3 Metadata
 
-`pip install music-tag`
+Install the `music-tag` package:
 
-```py
+```bash
+pip install music-tag
+```
+
+The following script removes all metadata from an MP3 file:
+
+```python
 from mutagen.mp3 import MP3
-mp3 = MP3(FILE_NAME)
+
+mp3 = MP3("FILE_NAME.mp3")
 mp3.delete()
 mp3.save()
 ```
 
-A more complete example can be found [here]({{site.baseurl}}/assets/lib/mp3_tag_cleaner.py)
+A more complete implementation is available
+[here]({{site.baseurl}}/assets/lib/mp3_tag_cleaner.py).
 
-## Battery alert
+## Battery Alert
 
-To preserve the battery of the computer, it is useful to keep the battery level
-between about $20\%$ and $85\%$. I have implemented a small script written in
-bash language notifying at regular intervals if the battery goes below or above
-these two bounds.
+To reduce battery wear, the charge level can be maintained approximately
+between 20% and 85%.
 
-> Script with battery alert is [here]({{site.baseurl}}/assets/lib/battery_health)
+A Bash script checks the battery level at regular intervals and sends a notification
+when it falls below or rises above configurable thresholds.
+
+> The battery monitoring script is available
+> [here]({{site.baseurl}}/assets/lib/battery_health).
 {: .prompt-info }
 
-If you want to modify the bounds or the interval of notifications, it is
-sufficient to modify the values of the three variables `MAX_BATTERY`,
-`MIN_BATTERY` and `SLEEP_TIME`.
+The script behavior can be configured through the following variables:
 
-To launch this script after the boot of the system, make the script executable
-with `chmod u+x` and then add its path in the list of startup applications.
+- `MAX_BATTERY`: maximum charge threshold
+- `MIN_BATTERY`: minimum charge threshold
+- `SLEEP_TIME`: interval between checks
 
-> The path of to the script should be absolute and you should use `/home/$USER`
-> instead of the `~` symbol.
+Make the script executable:
+
+```bash
+chmod u+x battery_health
+```
+
+To run it after login, add the absolute script path to the desktop environment's
+startup applications.
+
+> Prefer `/home/USERNAME` or `"$HOME"` instead of `~` when configuring startup
+> applications or services.
 {: .prompt-info }

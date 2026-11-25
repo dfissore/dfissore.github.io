@@ -4,49 +4,52 @@ image:
   path: /assets/img/logo_docker.png
 ...
 
-## About
-
-> Docker is a tool that is used to automate the deployment of applications in 
-> lightweight containers so that applications can work efficiently in different 
-> environments in isolation.
+Docker automates application deployment in lightweight containers. Containers
+isolate applications and their dependencies, making them easier to run consistently
+across development and production environments.
 
 Source: [Wikipedia](https://en.wikipedia.org/wiki/Docker_(software))
 
-## Useful commands
+## Useful Commands
 
-> All commands should be run in root mode
+> Docker commands that change system resources may require administrator privileges.
 {: .prompt-info }
 
-> Note: A Docker image creates containers to run on the Docker platform.
+| Description | Command |
+| --- | --- |
+| Build an image | `docker build -t IMAGE_NAME .` |
+| List images | `docker images` |
+| Run an image with an interactive shell | `docker run -it IMAGE_NAME /bin/bash` |
+| Copy a file from the host to a container | `docker cp PATH_ON_HOST CONTAINER_NAME:PATH_IN_CONTAINER` |
+| Copy a file from a container to the host | `docker cp CONTAINER_NAME:PATH_IN_CONTAINER PATH_ON_HOST` |
+| Remove all containers | `docker rm -vf $(docker ps -aq)` |
+| Create a container without starting it | `docker create --name CONTAINER_NAME IMAGE_NAME` |
+| Start a container | `docker start CONTAINER_NAME` |
 
-| Description                 | Command                                  |
-| --------------------------- | ---------------------------------------- |
-| Install dockerfile          | `docker build -t IMAGE_NAME .`           |
-| List images                 | `docker images`                          |
-| Run image with bash         | `docker run -i -t IMAGE_ID /bin/bash`    |
-| Copy from host to container | `docker cp PATH1 DOCKER_CONTAINER:PATH2` |
-| Copy from container to host | `docker cp DOCKER_CONTAINER:PATH2 PATH1` |
-| Remove all containers       | `docker rm -v -f $(docker ps -qa)`       |
-| Container creation          | `docker create --name CNT_NAME IMG_NAME` |
-| Container start             | `docker start CNT_NAME`                  |
+Docker images are immutable templates used to create containers. A container is
+a running instance of an image.
 
-- `CMD` is a command that will be executed once the container is run
-- `ENTRYPOINT` is the list arguments passed to CMD
-
+- `CMD` provides the default command executed when a container starts.
+- `ENTRYPOINT` defines the executable that receives arguments passed to `docker run`.
 
 ## Docker Installation
 
+The following procedure installs Docker Engine on Ubuntu.
+
 ```bash
-# Uninstall conflicting packages
+# Remove potentially conflicting packages
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 \
   podman-docker containerd runc; 
 do sudo apt-get remove $pkg; done
 
-# Add Docker's official GPG key:
+# Install prerequisites
 sudo apt-get update
-sudo apt-get install ca-certificates curl
+sudo apt-get install -y ca-certificates curl
+
+# Add Docker's official GPG key
 sudo install -m 0755 -d /etc/apt/keyrings
-sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg \
+  -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
 
 # Add the repository to Apt sources:
@@ -56,18 +59,19 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 
-# Install latest version
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+# Install Docker Engine
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io \
+  docker-buildx-plugin docker-compose-plugin
 
-# Verify that docker installation is successful
-sudo docker run hello-world
+# Verify the installation
+sudo docker run --rm hello-world
 ```
 
-Source: [here](https://docs.docker.com/engine/install/ubuntu/)
+Source: [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 
-## Dockerfile example
+## Dockerfile Example
 
-Dockerfile example of full latex installation:
+This example installs a complete TeX Live distribution in an Ubuntu-based image:
 
 ```dockerfile
 FROM ubuntu:xenial

@@ -1,67 +1,107 @@
 ---
-title: "Ocaml & Opam"
+title: "OCaml and OPAM"
 image:
   path: /assets/img/logo_opam.png
 ...
 
-## perf: profile ocaml performance
+## Profiling OCaml Performance
 
-| Description        | Command                                                           |
-| ------------------ | ----------------------------------------------------------------- |
-| Profile file       | `sudo perf record --call-graph lbr -- OCAML_BIN`                  |
-| Profile with name  | `sudo perf record --call-graph lbr -o perf.data.old -- OCAML_BIN` |
-| Compare perf files | `sudo perf diff perf.data.old perf.data`                          |
+Linux `perf` can profile OCaml executables and collect call-graph information:
 
-A good pointer: [here](https://ocaml-explore.netlify.app/workflows/profiling-your-project/)
+| Description                      | Command                                                                  |
+| -------------------------------- | ------------------------------------------------------------------------ |
+| Record a profile                 | `sudo perf record --call-graph lbr -- OCAML_EXECUTABLE`                  |
+| Record a profile to a named file | `sudo perf record --call-graph lbr -o perf.data.old -- OCAML_EXECUTABLE` |
+| Compare two profile files        | `perf diff perf.data.old perf.data`                                      |
 
-## Opam
+A detailed guide is available in
+[Profiling an OCaml project](https://ocaml-explore.netlify.app/workflows/profiling-your-project/).
 
-### Main commands
+## OPAM
 
-| Description          | Command                                                        |
-| -------------------- | -------------------------------------------------------------- |
-| Create global switch | `opam switch create SWITCH_NAME 4.14.1`                        |
-| Create local switch  | `opam switch create . 4.14.1`                                  |
-| Remove switch        | `opam switch remove SWITCH_NAME`                               |
-| Export switch        | `opam switch export FILE_EXPORT.txt --switch SWITCH_NAME`      |
-| Import switch        | `opam switch import FILE_EXPORT.txt --switch SWITCH_NAME`      |
-| Install only deps    | `opam install --deps-only PKG_NAME`                            |
-| Pin git branch       | `opam pin add https://github.com/PATH_TO_REPO.git#BRANCH_NAME` |
-| Install pkg version  | `opam install PKG_NAME=VERSION`                                |
+### Main Commands
 
-### Create empty switch for coq
+| Description                        | Command                                                        |
+| ---------------------------------- | -------------------------------------------------------------- |
+| Create a global switch             | `opam switch create SWITCH_NAME 4.14.1`                        |
+| Create a local switch              | `opam switch create . 4.14.1`                                  |
+| Remove a switch                    | `opam switch remove SWITCH_NAME`                               |
+| Export a switch                    | `opam switch export FILE_EXPORT.txt --switch SWITCH_NAME`      |
+| Import a switch                    | `opam switch import FILE_EXPORT.txt --switch SWITCH_NAME`      |
+| Install only dependencies          | `opam install --deps-only PACKAGE_NAME`                        |
+| Pin a Git branch                   | `opam pin add https://github.com/PATH_TO_REPO.git#BRANCH_NAME` |
+| Install a specific package version | `opam install PACKAGE_NAME=VERSION`                            |
 
-1. `opam switch create SWITCH_NAME 4.14.1`
-2. `opam switch SWITCH_NAME`
-3. `eval $(opam env)`
-4. `opam install --deps-only coq-core coq-elpi ocamlformat`
-5. `./configure`
-   - the first answer is `/home/USER/.opam/SWITCH_NAME/bin`
-   - the other add the suggested postfix to the previous path without bin
-6. `make world`
-7. `dune install coq-core coq-stdlib coqide-server`
+### Create an Empty Switch for Coq
 
-### Rectype error in lsp-server
+1. Create a switch:
 
-> Use merlin file to get dependency in a ocaml project not using `dune`
-
-1. `make .merlin`
-2. `touch dune-project`
-3. in `./.vscode/settings.json`
-   ```
-   "ocaml.server.args": [
-        "--fallback-read-dot-merlin"
-    ]
+   ```bash
+   opam switch create SWITCH_NAME 4.14.1
    ```
 
-### Vnorm error in coq-elpi
+2. Select the switch and load its environment:
 
-`git clean -dfx`
+   ```bash
+   opam switch SWITCH_NAME
+   eval "$(opam env)"
+   ```
 
-### Opam exported files
+3. Install dependencies:
 
-- Coq end elpi : [here]({{site.baseurl}}/assets/lib/opam_switch_coq_elpi.txt)
+   ```bash
+   opam install --deps-only coq-core coq-elpi ocamlformat
+   ```
 
-### Useful links
+4. Configure the project:
 
-[https://opam.ocaml.org/doc/FAQ.html](https://opam.ocaml.org/doc/FAQ.html)
+   ```bash
+   ./configure
+   ```
+
+   - Enter `/home/USER/.opam/SWITCH_NAME/bin` as the executable directory.
+   - For subsequent configuration paths, append the suggested suffix without
+     replacing the `.bin` directory.
+
+5. Build and install:
+
+   ```bash
+   make world
+   dune install coq-core coq-stdlib coqide-server
+   ```
+
+### Resolve OCaml LSP Errors
+
+If an OCaml project does not use Dune, Merlin may require a `.merlin` file:
+
+```bash
+make .merlin
+touch dune-project
+```
+
+Add the fallback option in `.vscode/settings.json`:
+
+```json
+{
+  "ocaml.server.args": [
+    "--fallback-read-dot-merlin"
+  ]
+}
+```
+
+### Resolve a `Vnorm` Error in Coq-Elpi
+
+```bash
+git clean -dfx
+```
+
+Use this command carefully: it permanently removes untracked and ignored files.
+
+### Exported OPAM Switch
+
+A reference switch configuration is available
+[here]({{site.baseurl}}/assets/lib/opam_switch_coq_elpi.txt).
+
+### Useful Links
+
+- [OPAM documentation](https://opam.ocaml.org/doc/FAQ.html)
