@@ -4,7 +4,7 @@
   <id>/</id>
   <title>Davide Fissore</title>
   <subtitle>dfissore</subtitle>
-  <updated>2026-11-27T09:24:15+01:00</updated>
+  <updated>2026-11-27T11:09:44+01:00</updated>
   <author>
     <name>Davide Fissore</name>
     <uri>/</uri>
@@ -22,7 +22,7 @@
   <entry>
     <title>My Scripts</title>
     <link href="/posts/scripts/" rel="alternate" type="text/html" title="My Scripts" />
-    <published>2026-11-27T09:24:15+01:00</published>
+    <published>2026-11-27T11:09:44+01:00</published>
   
     <updated>2026-11-25T12:15:34+01:00</updated>
   
@@ -68,7 +68,7 @@ A Bash script ch...</summary>
   <entry>
     <title>OCaml and OPAM</title>
     <link href="/posts/ocaml/" rel="alternate" type="text/html" title="OCaml and OPAM" />
-    <published>2026-11-27T09:24:15+01:00</published>
+    <published>2026-11-27T11:09:44+01:00</published>
   
     <updated>2026-11-25T12:15:34+01:00</updated>
   
@@ -111,7 +111,7 @@ Linux perf can profile OCaml executables and collect call-graph information:
   <entry>
     <title>Linux</title>
     <link href="/posts/linux/" rel="alternate" type="text/html" title="Linux" />
-    <published>2026-11-27T09:24:15+01:00</published>
+    <published>2026-11-27T11:09:44+01:00</published>
   
     <updated>2026-11-25T12:36:20+01:00</updated>
   
@@ -161,7 +161,7 @@ Linux perf can profile OCaml executables and collect call-graph information:
   <entry>
     <title>LaTeX</title>
     <link href="/posts/latex/" rel="alternate" type="text/html" title="LaTeX" />
-    <published>2026-11-27T09:24:15+01:00</published>
+    <published>2026-11-27T11:09:44+01:00</published>
   
     <updated>2026-11-25T12:15:34+01:00</updated>
   
@@ -200,7 +200,7 @@ Graphics and Images
   <entry>
     <title>Git and GitHub</title>
     <link href="/posts/github/" rel="alternate" type="text/html" title="Git and GitHub" />
-    <published>2026-11-27T09:24:15+01:00</published>
+    <published>2026-11-27T11:09:44+01:00</published>
   
     <updated>2026-11-25T12:15:34+01:00</updated>
   
